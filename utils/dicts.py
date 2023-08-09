@@ -6,7 +6,4 @@ def get_val(collection: dict, key, default='git') -> any:
     :param default: Значение при отсутствии ключа. По умолчанию равен 'git'
     :return: Значение по ключу
     """
-    if key in collection.keys():
-        return collection[key]
-
-    return default
+    return collection.get(key, default)
